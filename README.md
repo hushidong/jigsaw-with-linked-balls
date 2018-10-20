@@ -18,6 +18,7 @@ License:
 
 如果用数字表示一个球，那么一个10*10的下三角拼图如下图所示，共有55个球构成了一个球的矩阵。
 
+```
      1
      2     3
      4     5     6
@@ -28,10 +29,12 @@ License:
     29    30    31    32    33    34    35    36
     37    38    39    40    41    42    43    44    45
     46    47    48    49    50    51    52    53    54    55
+```
 	
 这个球矩阵可以利用拆分算法拆分成由若干个球链接在一起的小的形状，并且这些小的形状都是独一无二的，这些形状用于玩家进行拼图。
 比如拆分成如下12个小的形状：
 
+```
 total number of shapes in grid is 12
 shape No.=1 ,serial number of balls in shape:34 42 43 44 36
 shape No.=2 ,serial number of balls in shape:6 9 8 5 12
@@ -45,8 +48,11 @@ shape No.=9 ,serial number of balls in shape:35 28 27 21
 shape No.=10 ,serial number of balls in shape:37 29 30 23 31
 shape No.=11 ,serial number of balls in shape:1 2 3
 shape No.=12 ,serial number of balls in shape:50 51 49 48
+```
 
 也就是把球链接矩阵变成为了12个形状构成的拼图：
+
+```
     11
     11    11
      8     2     2
@@ -57,10 +63,12 @@ shape No.=12 ,serial number of balls in shape:50 51 49 48
     10    10    10     5     4     1     9     1
     10     7     7     7     4     1     1     1     3
      7     7    12    12    12    12     3     3     3     3
+```
 	 
 拆分出来后，小的形状可以通过各种组合来完成对原来下三角球链接形状的拼接，这可以让玩家来完成，也可以用拼接算法自动完成这一工作。
 比如经过拼接算法计算得到一种拼图结果为：
 
+```
     4
     4    5
     4    5    5
@@ -71,7 +79,8 @@ shape No.=12 ,serial number of balls in shape:50 51 49 48
     8    6   12   12   12   12    9    9
     8    6    6    7    7    7    3    9   11
     8    6    7    7    3    3    3    3   11   11
-
+```
+	
 可以看到形状的拼接与原来的拆分图是不同的，可以知道形状的有很多不同的拼接方案。玩家只要找到其中一种就可以完成拼图了。拼接算法也就是是自动找寻这种拼接方案的。
 
 其中拆分算法已经用在[拼图游戏]中，这里主要目的是给出拼接的算法。
